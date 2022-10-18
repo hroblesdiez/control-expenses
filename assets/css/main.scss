@@ -1,0 +1,59 @@
+//variables
+$font-family: 'Roboto', 'sans-serif';
+$primary-color: #f1f1f1;
+$black: #000000;
+$success-message: rgb(117, 197, 117);
+$white: #ffffff;
+
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+.form {
+  background-color: $primary-color;
+  flex: 1 1 auto;
+  padding: 3rem 2rem;
+  margin-right: 2rem;
+  border-radius: 8px;
+  @media only screen and (max-width: 768px) {
+    margin: 0 0 3rem 0;
+    padding: 1.5rem 1.5rem;
+  }
+  .form-control {
+    margin-bottom: 8px;
+  }
+}
+
+table {
+      border-collapse: collapse;
+      border: 2px solid rgb(200,200,200);
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+}
+td, th {
+  border: .5px solid rgb(190,190,190);
+  padding: 5px 8px;
+  text-align: center;
+}
+
+
+
+caption {
+  padding: 10px;
+}
+
+.bar {
+  fill: #4f009e;
+}
+
+.c3-axis-y-label {
+  font-size: 16px;
+}
+
+.c3-axis, .c3-axis-y > tspan {
+  font-size: 10px;
+}

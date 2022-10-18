@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.1/dist/lumen/bootstrap.css">
+  <script src="https://kit.fontawesome.com/03d62932bb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/c3.min.css">
+
+</head>
+<body class="pt-4 px-2 p-lg-3">
+  <h1 class="mb-3">Expense Tracker App</h1>
+  <div class="d-flex flex-column flex-md-row  justify-content-between"> <!--Forms container-->
+      <!--Incomes-->
+      <form id="incomesForm" class="form">
+        <div class="d-flex flex-column" id="incomes">
+          <div class="form-group">
+            <h2>Introduce your incomes</h2>
+            <!--Years in incomes-->
+            <div class="form-group">
+              <label for="incomesYear" class="form-label mt-4">Year</label>
+              <select class="form-select" id="incomesYear">
+                <option>2020</option>
+                <option>2021</option>
+                <option selected>2022</option>
+              </select>
+            </div>
+            <!--End of Years in incomes-->
+
+          <!--Incomes amounts per month-->
+          <div class="form-group" id="inputsIncomesAmount">
+            <label class="col-form-label mt-4" for="month">Month</label>
+            <p class="col-form-label mb-0 ">January:</p>
+            <input type="text" class="form-control" placeholder="January" id="January">
+
+            <p class="col-form-label mb-0 ">February:</p>
+            <input type="text" class="form-control" placeholder="February" id="February">
+
+            <p class="col-form-label mb-0 ">March:</p>
+            <input type="text" class="form-control" placeholder="March" id="March">
+
+            <p class="col-form-label mb-0 ">April:</p>
+            <input type="text" class="form-control" placeholder="April" id="April">
+
+            <p class="col-form-label mb-0 ">May:</p>
+            <input type="text" class="form-control" placeholder="May" id="May">
+
+            <p class="col-form-label mb-0 ">June:</p>
+            <input type="text" class="form-control" placeholder="June" id="June">
+
+            <p class="col-form-label mb-0 ">July:</p>
+            <input type="text" class="form-control" placeholder="July" id="July">
+
+            <p class="col-form-label mb-0 ">August:</p>
+            <input type="text" class="form-control" placeholder="August" id="August">
+
+            <p class="col-form-label mb-0 ">September:</p>
+            <input type="text" class="form-control" placeholder="September" id="September">
+
+            <p class="col-form-label mb-0 ">October:</p>
+            <input type="text" class="form-control" placeholder="October" id="October">
+
+            <p class="col-form-label mb-0 ">November:</p>
+            <input type="text" class="form-control" placeholder="November" id="November">
+
+            <p class="col-form-label mb-0 ">December:</p>
+            <input type="text" class="form-control" placeholder="December" id="December">
+          </div>
+          <!--End of Incomes amounts per month-->
+          <!--Save button and message of success-->
+          <div class="form-group mt-4">
+            <button type="submit" class="px-2 py-1 bg-primary text-white border-primary rounded" id="saveIncomes">Save</button>
+            <p class="bg-success text-white mt-4 py-2 px-3 d-none" id="incomesMessage">Data have been saved!</p>
+          </div>
+          <!--End of Save button and message of success-->
+          </div>
+        </div>
+      </form>
+      <!--End of Incomes-->
+      <!--Expenses-->
+      <form id="expensesForm" class="form ">
+        <div class="d-flex flex-column" id="expenses">
+          <div class="form-group">
+            <h2>Introduce your expenses</h2>
+              <!--Years in expenses-->
+            <div class="form-group">
+              <label for="expensesYear" class="form-label mt-4">Year</label>
+              <select class="form-select" id="expensesYear">
+                <option>2020</option>
+                <option>2021</option>
+                <option selected>2022</option>
+              </select>
+            </div>
+            <!--End of Years in expenses-->
+            <!--Months in expenses-->
+            <label for="expensesMonth" class="form-label mt-4">Month</label>
+            <select class="form-select" id="expensesMonth">
+              <option selected>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+          </div>
+          <!--End of Months in expenses-->
+          <!--Expenses amounts-->
+          <div class="form-group" id="inputsExpensesAmount">
+            <label class="col-form-label mt-4" for="amount">Amount</label>
+            <p class="col-form-label mb-0 ">Mortgage/Rental</p>
+            <input type="text" class="form-control" placeholder="Mortgage/Rental" id="mortgage">
+            <p class="col-form-label mb-0 ">Electricity bill</p>
+            <input type="text" class="form-control" placeholder="Electricity bill" id="electricity">
+            <p class="col-form-label mb-0 ">Heating bill</p>
+            <input type="text" class="form-control" placeholder="Heating bill" id="heating">
+            <p class="col-form-label mb-0 ">Feeding costs</p>
+            <input type="text" class="form-control" placeholder="Feeding costs" id="feeding">
+            <p class="col-form-label mb-0 ">Leisure</p>
+            <input type="text" class="form-control" placeholder="Leisure" id="leisure">
+            <p class="col-form-label mb-0 ">Others</p>
+            <input type="text" class="form-control" placeholder="Others" id="others">
+          </div>
+          <!--End of Expenses amounts-->
+          <!--Save button and message of success-->
+          <div class="form-group mt-4">
+            <button type="submit" class="px-2 py-1 bg-primary text-white border-primary rounded" id="saveExpenses">Save</button>
+            <p class="bg-success text-white mt-4 py-2 px-3 d-none" id="expensesMessage">Data have been saved!</p>
+          </div>
+          <!--End of Save button and message of success-->
+        </div>
+      </form>
+      <!--End of Expenses-->
+  </div> <!--End of forms container-->
+  <!--Statistics-->
+  <div class="mt-5 form">
+    <h2>Statistics</h2>
+
+      <div class="d-flex flex-row align-items-end me-lg-5">
+
+          <div class="form-group me-2">
+              <label for="statsYear" class="form-label mt-4">Year</label>
+              <select class="form-select" id="statsYear">
+                <option>2020</option>
+                <option>2021</option>
+                <option selected>2022</option>
+              </select>
+            </div>
+          <div class="form-group me-2">
+              <label for="statsMonth" class="form-label mt-4">Month</label>
+                  <select class="form-select" id="statsMonth">
+                    <option selected>All</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                  </select>
+            </div>
+
+          <div class="form-group mt-4">
+            <button type="submit" class="px-2 py-1 bg-primary text-white border-primary rounded" id="showStats">Show</button>
+            <h3 class="bg-alert mb-0" id="showMessage"></h3>
+          </div>
+      </div>
+      <div class="d-flex flex-wrap align-items-center justify-content-between mt-4">
+        <div class="" id="tableStats">
+          <!--stats showed dinamically-->
+        </div>
+        <div class="mt-5 flex-grow-1" id="chartStats">
+          <div class="container" id="allChart"></div>
+        </div>
+      </div>
+
+
+  </div>
+  <!--End of Statistics-->
+  <!--d3.js and c3.js-->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="./assets/js/c3.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
